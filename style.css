@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+
+}
+
+header {
+    background-image:url(./fundo-header\ 1.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.logo {
+    font-size: 25px;
+    color: #000;
+    font-weight: 600;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li a {
+    color: #000;
+    padding: 30px 70px;
+    font-size: 20px;
+}
+
+nav li a:hover {
+    color: #B65FC8;
+}
+
+.dropdown-menu {
+    position: absolute;
+    display: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+
+}
+
+
+.contato-menu {
+    position: absolute;
+    display: none;
+}
+
+.contato-disponivel:hover .contato-menu {
+    display: block;
+}
+
+.contato-menu a {
+    display: block;
+
+}
+
+.service-menu {
+    position: absolute;
+    display: none;
+}
+
+.service-disponivel:hover .service-menu {
+    display: block;
+}
+
+.service-menu a {
+    display: block;
+    font-size: 20px;
+
+
+}
+
+
+.home-menu {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-contener {
+    max-width: 600px;
+
+}
+
+h1 {
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 82px;
+    cursor: pointer;
+}
+
+h3 {
+    margin-top: 35px;
+    margin-left: 40px;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    color: #000;
+    cursor: pointer;
+
+}
+
+h3:hover {
+    color: #B65FC8;
+
+}
+
+p {
+
+    text-align: center;
+    line-height: 33px;
+    margin-top: 50px;
+    font-size: 23px;
+    font-weight: 400;
+    margin: 20px 0 40px;
+    color: rgba(75, 80, 90, 1);
+    cursor: pointer;
+}
+
+button{
+
+    margin: 0 auto;
+    display: block;
+    padding: 15px 40px;
+    background:#B65FC8;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #DDB5DF;
+    border: none;
+    font-size: 16px;
+    color: #000;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+
+button:hover{
+    opacity: 0.5;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+
+
+}
+
+.box::before {
+    content: "";
+    position: absolute;
+    inset: -10px 140px;
+    transition: 0.5s;
+    background: linear-gradient(315deg, #8214ff, #121C69, #B65FC8, #FB89BD);
+    animation: animate 4s linear infinite;
+}
+
+.box:hover::before {
+    inset: -20px 0px;
+
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.box::after {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    background: #FFF;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.content {
+    position: absolute;
+    inset: 30px;
+    background: #B65FC8;
+    border: 6px solid #FFF;
+    background-size: cover;
+    z-index: 3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.content img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+@font-face {
+    font-family: 'Nome';
+    src: url("./font/KGRedHands.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    word-spacing: 0.5px;
+    font-family: 'Nome';
+    font-size: 70px;
+    text-align: center;
+    color: #000;
+
+}
+
+@media screen and (max-width: 900px){
+    body{
+        width: 100%;
+        height: 50%;
+        padding: 0;
+        margin: 0;
+    }
+
+   header{
+    padding: 9px 10%;
+
+}
+    nav li{
+        display: block;
+        height: auto;
+        width: 100%;
+        position: static;
+        display: none;
+    }
+    
+    .container, .box, .content img{
+     display: none;
+    
+    }
+
+    @font-face {
+        font-family: 'Nome';
+        src: url("./font/KGRedHands.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    h1 {
+        width: auto;
+        margin: -50px 50px 0px 50px;
+        line-height: 55px;
+        font-family: 'Nome';
+        font-size: 30px;
+        text-align: center;
+        color: #000;
+    
+    }
+
+    h3 {
+        width: auto;
+        margin-top: 15px;
+        margin-left: 20px;
+        font-size: 20px;
+    }
+       
+    p{
+        margin: 15px 15px 40px;
+        width: auto;
+        text-align: center;
+        font-size: 14px;
+    }
+
+
+}
+
+
